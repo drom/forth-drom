@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Forth Editor</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="codemirror.css">
+    <link rel="stylesheet" href="colorforth.css">
+    <link rel="stylesheet" href="dialog.css">
+    <!-- <link rel="stylesheet" href="redrom.css"> -->
+    <style type="text/css">
+    pre {
+        font-family: 'Droid Sans Mono', monospace;
+        font-size: 16px;
+        margin: 0px;
+    }
+    .CodeMirror {
+        font-family: 'Droid Sans Mono', monospace;
+        font-size: 16px;
+        border-top: 0px;
+        border-bottom: 0px;
+        background: #f7f7f7;
+        height: 100%;
+        border: 0px;
+    }
+    button {
+        position:fixed;
+        bottom:40px;
+        right:40px;
+    }
+    body {
+        margin: 0px;
+        border: 0px;
+    }
+    textarea {
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+    ui-treeview::shadow /deep/ * {
+        font-family: 'Droid Sans Mono', monospace;
+        font-size: 16px;
+    }
+    </style>
+    <script src="codemirror.js"></script>
+    <script src="search.js"></script>
+    <script src="searchcursor.js"></script>
+    <script src="javascript.js"></script>
+    <script src="forth.js"></script>
+</head>
+<body>
+    <div id="content">
+        <div style ="width: 50%; float:left; height: 100%"><textarea id="inp"></textarea></div>
+        <div style ="width: 50%; float:left; height: 100%; overflow: auto;"><textarea id="oup"></textarea></div>
+    </div>
+    <button id="button" type="button">C</button>
+    <script src="app.js"></script>
+</body>
+</html>
