@@ -1,7 +1,7 @@
 {
-  "name": "forth-demo",
+  "name": "forth-drom",
   "version": "0.1.0",
-  "description": "forth demo",
+  "description": "Web based, realtime Forth editor / interpreter",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/browserify src/forth-app.js -o forth/app.js && cp src/forth-editor.html forth/index.html && cp node_modules/codemirror/lib/*.* forth/. && cp node_modules/codemirror/addon/dialog/*.css forth/. && cp node_modules/codemirror/addon/search/searc*.js forth/. && cp node_modules/codemirror/mode/forth/*.js forth/. && cp node_modules/codemirror/mode/javascript/*.js forth/. && cp node_modules/codemirror/theme/colorforth.css forth/. "
