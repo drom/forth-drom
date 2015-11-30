@@ -1,6 +1,6 @@
 {
   "name": "forth-drom",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web based, realtime Forth editor / interpreter",
   "main": "index.js",
   "scripts": {
