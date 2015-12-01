@@ -9,11 +9,15 @@
         var time = Date.now();
         var source = cmForth.getValue();
         var consolebuffer = '';
+        var refreshTimeout;
         f = forth();
         f.s.write(source);
         f.s.on('data', function (chunk) {
             consolebuffer += chunk;
-            cmJavaSCript.setValue(consolebuffer);
+            clearTimeout(refreshTimeout);
+            refreshTimeout = setTimeout(function () {
+                cmJavaSCript.setValue(consolebuffer);
+            }, 100);
         });
         console.log((Date.now() - time) + 'ms');
         localStorage.forthSourceCode = source;
