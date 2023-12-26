@@ -4,14 +4,20 @@
   "description": "Web based, realtime Forth editor / interpreter",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/browserify src/forth-app.js -o forth/app.js && cp src/forth-editor.html forth/index.html && cp node_modules/codemirror/lib/*.* forth/. && cp node_modules/codemirror/addon/dialog/*.css forth/. && cp node_modules/codemirror/addon/search/searc*.js forth/. && cp node_modules/codemirror/mode/forth/*.js forth/. && cp node_modules/codemirror/mode/javascript/*.js forth/. && cp node_modules/codemirror/theme/colorforth.css forth/. "
+    "browserify": "browserify src/forth-app.js -o forth/app.js",
+    "copy": "cp src/forth-editor.html forth/index.html && cp node_modules/codemirror/lib/*.* forth/. && cp node_modules/codemirror/addon/dialog/*.css forth/. && cp node_modules/codemirror/addon/search/searc*.js forth/. && cp node_modules/codemirror/mode/forth/*.js forth/. && cp node_modules/codemirror/mode/javascript/*.js forth/. && cp node_modules/codemirror/theme/colorforth.css forth/.",
+    "test": "eslint src && npm run browserify && npm run copy"
   },
   "author": "alex@drom.io",
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^12.0.1",
-    "codemirror": "^5.8.0",
-    "eslint": "^1.9.0",
+    "@drom/eslint-config": "^0.12.0",
+    "browserify": "^17.0.0",
+    "codemirror": "^5.65.16",
+    "eslint": "^8.56.0",
     "forth": "^0.17.0"
+  },
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint8/node12"
   }
 }

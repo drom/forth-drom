@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>Forth Editor</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="codemirror.css">
     <link rel="stylesheet" href="colorforth.css">
     <link rel="stylesheet" href="dialog.css">
@@ -48,12 +48,12 @@
     <script src="javascript.js"></script>
     <script src="forth.js"></script>
 </head>
-<body>
+<body onload="FORTH.refresh()">
     <div id="content">
         <div style ="width: 50%; float:left; height: 100%"><textarea id="inp"></textarea></div>
         <div style ="width: 50%; float:left; height: 100%; overflow: auto;"><textarea id="oup"></textarea></div>
     </div>
     <button id="button" type="button">C</button>
-    <script src="app.js"></script>
 </body>
+<script src="app.js"></script>
 </html>
